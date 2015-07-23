@@ -319,9 +319,9 @@
 #u246
 {
 	z-index: 29;
-	width: 16px;
-	height: 16px;
-	background-color: #7DC6FD;
+	width: 10px;
+	height: 10px;
+	background-color: #1F7EEA;
 	border-radius: 10px;
 	position: relative;
 }
@@ -329,8 +329,8 @@
 #u247
 {
 	z-index: 30;
-	width: 16px;
-	height: 16px;
+	width: 10px;
+	height: 10px;
 	background-color: #7DC6FD;
 	border-radius: 10px;
 	margin-top: 30px;
@@ -340,8 +340,8 @@
 #u249
 {
 	z-index: 32;
-	width: 16px;
-	height: 16px;
+	width: 10px;
+	height: 10px;
 	background-color: #7DC6FD;
 	border-radius: 10px;
 	margin-top: 30px;
@@ -351,9 +351,9 @@
 #u248
 {
 	z-index: 31;
-	width: 16px;
-	height: 16px;
-	background-color: #1F7EEA;
+	width: 10px;
+	height: 10px;
+	background-color: #7DC6FD;
 	border-radius: 10px;
 	margin-top: 30px;
 	position: relative;
@@ -362,8 +362,8 @@
 #u250
 {
 	z-index: 33;
-	width: 16px;
-	height: 16px;
+	width: 10px;
+	height: 10px;
 	background-color: #7DC6FD;
 	border-radius: 10px;
 	margin-top: 30px;
@@ -517,3 +517,4 @@ body
 {
 	cursor:pointer;
 }
+#menu{position: absolute; height: 50px; bottom: 0; z-index:9999;} 
