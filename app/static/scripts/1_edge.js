@@ -111,8 +111,8 @@
 })("EDGE-1823814");
 
 (function($, Edge, compId) {
-	var Composition = gedge =  Edge.Composition,
-		Symbol = ge.Symbol;
+	var Composition =  Edge.Composition,
+		Symbol = Composition.Symbol;
 
 	Edge.registerEventBinding(compId, function($) {
 		//Edge symbol: 'stage'
