@@ -32,39 +32,39 @@
                             type: 'image',
                             rect: ['135px', '111px', '526px', '486px', 'auto', 'auto'],
                             opacity: '0.08',
-                            fill: ["rgba(0,0,0,0)",im+"%E7%BA%BF.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E7%BA%BF@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image',
                             type: 'image',
                             rect: ['515px', '-163px', '0px', '0px', 'auto', 'auto'],
                             opacity: '0.3',
-                            fill: ["rgba(0,0,0,0)",im+"%E8%AF%AD%E9%9F%B3.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E8%AF%AD%E9%9F%B3@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image2',
                             type: 'image',
                             rect: ['-92px', '360px', '10px', '10px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E4%BF%A1%E6%81%AF.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E4%BF%A1%E6%81%AF@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image3',
                             type: 'image',
                             rect: ['-102px', '0px', '8px', '8px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E4%BF%A1%E5%8F%B7.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E4%BF%A1%E5%8F%B7@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image5',
                             type: 'image',
                             rect: ['837px', '748px', '8px', '8px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E9%80%9A%E8%AF%9D.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E9%80%9A%E8%AF%9D@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image6',
                             type: 'image',
                             rect: ['822px', '-217px', '308px', '124px', 'auto', 'auto'],
                             opacity: '0',
-                            fill: ["rgba(0,0,0,0)",im+"%E6%B2%9F%E9%80%9A.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E6%B2%9F%E9%80%9A@2x.png",'0px','0px']
                         }
                     ],
                     style: {
@@ -77,17 +77,17 @@
                     }
                 },
                 timeline: {
-                    duration: 1750,
+                    duration: 2000,
                     autoPlay: true,
                     data: [
                         [
-                            "eid60",
+                            "eid77",
                             "top",
-                            908,
-                            416,
-                            "linear",
+                            0,
+                            750,
+                            "easeInCirc",
                             "${Image6}",
-                            '-217px',
+                            '-241px',
                             '259px'
                         ],
                         [
@@ -101,14 +101,24 @@
                             '1'
                         ],
                         [
-                            "eid58",
+                            "eid79",
                             "left",
-                            1323,
+                            0,
                             0,
                             "linear",
                             "${Image6}",
                             '822px',
-                            '822px'
+                            '839px'
+                        ],
+                        [
+                            "eid80",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${Image6}",
+                            '839px',
+                            '839px'
                         ],
                         [
                             "eid39",
@@ -121,24 +131,24 @@
                             '181px'
                         ],
                         [
-                            "eid63",
+                            "eid78",
                             "opacity",
-                            695,
-                            629,
+                            0,
+                            2000,
                             "linear",
                             "${Image6}",
                             '0',
                             '1'
                         ],
                         [
-                            "eid49",
-                            "left",
+                            "eid44",
+                            "height",
                             0,
                             1000,
                             "linear",
-                            "${Image3}",
-                            '-102px',
-                            '159px'
+                            "${Image2}",
+                            '10px',
+                            '67px'
                         ],
                         [
                             "eid50",
@@ -191,14 +201,14 @@
                             '434px'
                         ],
                         [
-                            "eid44",
-                            "height",
+                            "eid33",
+                            "width",
                             0,
-                            1000,
+                            750,
                             "linear",
-                            "${Image2}",
-                            '10px',
-                            '67px'
+                            "${Image5}",
+                            '8px',
+                            '110px'
                         ],
                         [
                             "eid24",
@@ -211,14 +221,14 @@
                             '1'
                         ],
                         [
-                            "eid43",
-                            "width",
+                            "eid29",
+                            "top",
                             0,
-                            1000,
+                            750,
                             "linear",
-                            "${Image2}",
-                            '10px',
-                            '67px'
+                            "${Image5}",
+                            '748px',
+                            '354px'
                         ],
                         [
                             "eid17",
@@ -271,24 +281,24 @@
                             '81px'
                         ],
                         [
-                            "eid29",
-                            "top",
-                            0,
-                            750,
-                            "linear",
-                            "${Image5}",
-                            '748px',
-                            '354px'
-                        ],
-                        [
-                            "eid33",
+                            "eid43",
                             "width",
                             0,
-                            750,
+                            1000,
                             "linear",
-                            "${Image5}",
-                            '8px',
-                            '110px'
+                            "${Image2}",
+                            '10px',
+                            '67px'
+                        ],
+                        [
+                            "eid49",
+                            "left",
+                            0,
+                            1000,
+                            "linear",
+                            "${Image3}",
+                            '-102px',
+                            '159px'
                         ]
                     ]
                 }
@@ -297,6 +307,7 @@
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 })("EDGE-20493892");
+
 (function($, Edge, compId){
 var Composition = Edge.Composition, Symbol = Edge.Symbol; // 常用的 Edge 类别名
 

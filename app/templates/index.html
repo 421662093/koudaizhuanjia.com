@@ -174,7 +174,7 @@
     $("#menu .colelem").css('background-color','#7DC6FD')
     if(tindex==1)
     {
-    	loadedge('EDGE-1823814')
+      loadedge('EDGE-1823814')
       $('#u246').css('background-color','#1F7EEA')
       oheight = $("#u108_img").offset().top
       height = $("#u108_img").height()
@@ -187,12 +187,12 @@
       height = $("#u219_img").height()
       }
     else if(tindex==3)
-      {
+    {
       	loadedge('EDGE-15184763')
         $('#u249').css('background-color','#1F7EEA')
-      oheight = $("#u244_img").offset().top
-      height = $("#u244_img").height()
-      }
+        oheight = $("#u244_img").offset().top
+        height = $("#u244_img").height()
+    }
     else if(tindex==4)
       {
       	loadedge('EDGE-20493892')
@@ -203,15 +203,14 @@
     else if(tindex==5)
       {
       	loadedge('EDGE-23045451')
+
         $('#u250').css('background-color','#1F7EEA')
-      oheight = $("#u262_img").offset().top
-      height = $("#u262_img").height()
+        oheight = $("#u262_img").offset().top
+        height = $("#u262_img").height()
       }
 
     var tempheight = ($(document.body).height()/2-1385)/2
-
     //tempheight = $(document.body).height()/2 + $(window).scrollTop() - height - 2 + "px";
-
     $("html,body").animate({scrollTop:(oheight-tempheight/2.8)+'px'},speed,function(){islock=false});
   }
 
@@ -221,6 +220,8 @@
 	(function($, Edge, compId) {
 		var stage = Edge.getComposition(compId).getStage();
 		stage.play();
+    if(!($('#applya').length>0))
+      $('#u262_img_Image6').wrap('<a id="applya" href="/apply"></a>')
 	})(AdobeEdge.$, AdobeEdge, cid);
 
   }

@@ -23,7 +23,7 @@
 		g7 = '2.png',
 		g5 = '%E5%8D%B3%E5%88%BB%E6%8A%A5%E5%90%8D.png',
 		g9 = '%E5%85%BB%E6%88%90%E5%BC%8F%E7%9A%84%E5%85%B1%E4%BA%AB%E7%BB%8F%E6%B5%8E%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0.png',
-		g8 = '1%E3%80%82.png';
+		g8 = '1%E3%80%82@2x.png';
 	var im = '/static/images/',
 		aud = '/static/media/',
 		vid = '/static/media/',

@@ -32,39 +32,39 @@
                             type: 'image',
                             rect: ['205px', '158px', '413px', '434px', 'auto', 'auto'],
                             opacity: '0.28',
-                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%88%20.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%88%20@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image',
                             type: 'image',
                             rect: ['228px', '-113px', '76px', '76px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E4%B9%A6.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E4%B9%A6@2x.png",'0px','0px']
                         },
                         {
                             id: '_tu',
                             type: 'image',
                             rect: ['322px', '238px', '180px', '226px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E6%89%8B%E6%9C%BAtu.png",'0px','0px'],
+                            fill: ["rgba(0,0,0,0)",im+"%E6%89%8B%E6%9C%BAtu@2x.png",'0px','0px'],
                             transform: [[],['-6']]
                         },
                         {
                             id: 'Image3',
                             type: 'image',
                             rect: ['892px', '766px', '0px', '0px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E7%93%B6%E5%AD%90.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E7%93%B6%E5%AD%90@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image4',
                             type: 'image',
                             rect: ['177px', '255px', '20px', '20px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E5%8C%85.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%8C%85@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image5',
                             type: 'image',
                             rect: ['839px', '-224px', '358px', '149px', 'auto', 'auto'],
                             opacity: '0',
-                            fill: ["rgba(0,0,0,0)",im+"%E6%89%8B%E6%9C%BA.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E6%89%8B%E6%9C%BA@2x.png",'0px','0px']
                         }
                     ],
                     style: {

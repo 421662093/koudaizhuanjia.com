@@ -39,37 +39,43 @@
                             type: 'image',
                             rect: ['259px', '195px', '240px', '241px', 'auto', 'auto'],
                             opacity: '1',
-                            fill: ["rgba(0,0,0,0)",im+"tubiao%20.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"tubiao%20@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image',
                             type: 'image',
                             rect: ['471px', '110px', '42px', '42px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E4%B8%93%E5%AE%B6.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E4%B8%93%E5%AE%B6@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image2',
                             type: 'image',
                             rect: ['589px', '392px', '48px', '48px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E5%AD%A6%E4%BD%8D.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%AD%A6%E4%BD%8D@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image5',
                             type: 'image',
                             rect: ['823px', '-130px', '308px', '80px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E4%B8%93%E4%B8%9A.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E4%B8%93%E4%B8%9A@2x.png",'0px','0px']
+                        },
+                        {
+                            id: 'Image6',
+                            type: 'image',
+                            rect: ['839px', '343px', '236px', '61px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"%E6%8C%89%E9%92%AE@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image3',
                             type: 'image',
                             rect: ['168px', '227px', '42px', '42px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E7%A4%BC%E7%89%A9.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E7%A4%BC%E7%89%A9@2x.png",'0px','0px']
                         },
                         {
                             id: 'Image4',
                             type: 'image',
                             rect: ['153px', '469px', '42px', '42px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E5%A5%96%E6%9D%AF.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%A5%96%E6%9D%AF@2x.png",'0px','0px']
                         }
                     ],
                     style: {
@@ -85,6 +91,86 @@
                     duration: 3000,
                     autoPlay: true,
                     data: [
+                        [
+                            "eid67",
+                            "top",
+                            0,
+                            750,
+                            "easeInCirc",
+                            "${Image5}",
+                            '-263px',
+                            '237px'
+                        ],
+                        [
+                            "eid73",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${Image6}",
+                            '839px',
+                            '839px'
+                        ],
+                        [
+                            "eid74",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${Image6}",
+                            '839px',
+                            '839px'
+                        ],
+                        [
+                            "eid72",
+                            "opacity",
+                            0,
+                            2000,
+                            "linear",
+                            "${Image6}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid28",
+                            "top",
+                            0,
+                            750,
+                            "linear",
+                            "${tubiao_}",
+                            '195px',
+                            '203px'
+                        ],
+                        [
+                            "eid35",
+                            "top",
+                            750,
+                            750,
+                            "linear",
+                            "${tubiao_}",
+                            '203px',
+                            '195px'
+                        ],
+                        [
+                            "eid38",
+                            "top",
+                            1500,
+                            750,
+                            "linear",
+                            "${tubiao_}",
+                            '195px',
+                            '203px'
+                        ],
+                        [
+                            "eid39",
+                            "top",
+                            2250,
+                            750,
+                            "linear",
+                            "${tubiao_}",
+                            '203px',
+                            '195px'
+                        ],
                         [
                             "eid29",
                             "left",
@@ -126,34 +212,24 @@
                             '259px'
                         ],
                         [
-                            "eid66",
+                            "eid71",
                             "top",
-                            1000,
-                            500,
-                            "linear",
-                            "${Image5}",
-                            '-130px',
-                            '237px'
+                            0,
+                            750,
+                            "easeInCirc",
+                            "${Image6}",
+                            '-157px',
+                            '343px'
                         ],
                         [
-                            "eid64",
-                            "left",
-                            1000,
+                            "eid68",
+                            "opacity",
                             0,
+                            2000,
                             "linear",
                             "${Image5}",
-                            '823px',
-                            '823px'
-                        ],
-                        [
-                            "eid62",
-                            "left",
-                            1500,
-                            0,
-                            "linear",
-                            "${Image5}",
-                            '823px',
-                            '823px'
+                            '0',
+                            '1'
                         ],
                         [
                             "eid3",
@@ -196,44 +272,24 @@
                             '1'
                         ],
                         [
-                            "eid28",
-                            "top",
+                            "eid69",
+                            "left",
                             0,
-                            750,
+                            0,
                             "linear",
-                            "${tubiao_}",
-                            '195px',
-                            '203px'
+                            "${Image5}",
+                            '823px',
+                            '839px'
                         ],
                         [
-                            "eid35",
-                            "top",
-                            750,
-                            750,
+                            "eid70",
+                            "left",
+                            2000,
+                            0,
                             "linear",
-                            "${tubiao_}",
-                            '203px',
-                            '195px'
-                        ],
-                        [
-                            "eid38",
-                            "top",
-                            1500,
-                            750,
-                            "linear",
-                            "${tubiao_}",
-                            '195px',
-                            '203px'
-                        ],
-                        [
-                            "eid39",
-                            "top",
-                            2250,
-                            750,
-                            "linear",
-                            "${tubiao_}",
-                            '203px',
-                            '195px'
+                            "${Image5}",
+                            '839px',
+                            '839px'
                         ],
                         [
                             "eid26",
@@ -331,8 +387,8 @@
         };
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
-
 })("EDGE-23045451");
+
 (function($, Edge, compId){
 var Composition = Edge.Composition, Symbol = Edge.Symbol; // 常用的 Edge 类别名
 
