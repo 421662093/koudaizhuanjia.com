@@ -16,4 +16,4 @@ from app.models import collection
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 
 if __name__ == '__main__':
-    app.run(host='192.168.2.38')  # 192.168.199.239
+    app.run(host='192.168.199.239')  # 192.168.199.239
