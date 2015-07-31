@@ -31,47 +31,47 @@
                             id: '_31x',
                             type: 'image',
                             rect: ['156px', '163px', '439px', '281px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%883%401x@2x.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%883@2x.png",'0px','0px']
                         },
                         {
                             id: '_21x',
                             type: 'image',
                             rect: ['300px', '103px', '341px', '247px', 'auto', 'auto'],
                             opacity: '0',
-                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%882%401x@2x.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%882@2x.png",'0px','0px']
                         },
                         {
                             id: '_11x',
                             type: 'image',
                             rect: ['166px', '356px', '186px', '260px', 'auto', 'auto'],
                             opacity: '0.2',
-                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%881%401x@2x.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%881@2x.png",'0px','0px']
                         },
                         {
                             id: '_1x',
                             type: 'image',
                             rect: ['414px', '502px', '122px', '38px', 'auto', 'auto'],
                             opacity: '1',
-                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%88%401x@2x.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%9C%88@2x.png",'0px','0px']
                         },
                         {
                             id: '_1x2',
                             type: 'image',
                             rect: ['276px', '278px', '209px', '208px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E6%94%BE%E5%A4%A7%E5%A2%83%401x@2x.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E6%94%BE%E5%A4%A7%E5%A2%83@2x.png",'0px','0px']
                         },
                         {
                             id: '_1x3',
                             type: 'image',
                             rect: ['204px', '197px', '127px', '103px', 'auto', 'auto'],
                             opacity: '0',
-                            fill: ["rgba(0,0,0,0)",im+"%E5%AF%B9%E8%AF%9D%401x@2x.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%AF%B9%E8%AF%9D@2x.png",'0px','0px']
                         },
                         {
                             id: '_1x32',
                             type: 'image',
                             rect: ['841px', '-248px', '475px', '149px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"%E5%B7%A5%E4%BD%9C%401x3@2x.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"%E5%B7%A5%E4%BD%9C@2x.png",'0px','0px']
                         }
                     ],
                     style: {
