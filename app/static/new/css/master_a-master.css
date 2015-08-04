@@ -1,0 +1,13 @@
+#u276,#u282,#u288
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u288:hover
+{
+	opacity: 0.8;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+}
+

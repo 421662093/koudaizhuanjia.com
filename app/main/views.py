@@ -27,6 +27,9 @@ from ..models import ExpertApply, collection
 def index():
     return render_template('index.html')
 
+@main.route('/phoneindex', methods=['GET', 'POST'])
+def phoneindex():
+    return render_template('phoneindex.html')
 
 @main.route('/apply', methods=['GET', 'POST'])
 def apply():
@@ -60,3 +63,7 @@ def apply():
         item.save()
         '''
         return render_template('apply.html')
+
+@main.route('/phoneapply', methods=['GET', 'POST'])
+def phoneapply():
+    return render_template('phoneapply.html')
