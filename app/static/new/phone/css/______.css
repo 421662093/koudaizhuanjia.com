@@ -1,7 +1,7 @@
 .version._______ /* version checker */
 {
-	color: #00000B;
-	background-color: #AB1783;
+	color: #0000F7;
+	background-color: #4B49E1;
 }
 
 @-ms-viewport
@@ -33,12 +33,12 @@
 {
 	z-index: 1;
 	width: 380px;
-	min-height: 531px;
+	min-height: 537px;
 	background-image: none;
 	border-style: none;
 	border-color: #000000;
 	background-color: transparent;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 }
 
 #pu555
@@ -50,9 +50,15 @@
 #u555
 {
 	z-index: 8;
-	min-height: 133px;
+	min-height: 481px;
 	background-color: #2195F3;
-	padding-bottom: 396px;
+	padding: 20px 12px 13px;
+}
+
+#pu556
+{
+	width: 0.01px;
+	position: relative;
 }
 
 #u556
@@ -62,16 +68,7 @@
 	background-color: transparent;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 24px;
-	left: 12px;
-}
-
-#pmenuu558
-{
-	width: 0.01px;
-	margin-right: -10000px;
-	margin-top: 20px;
-	margin-left: 142px;
+	margin-top: 4px;
 }
 
 #menuu558
@@ -81,8 +78,9 @@
 	border-style: none;
 	border-color: transparent;
 	background-color: transparent;
-	margin-left: 10px;
 	position: relative;
+	margin-right: -10000px;
+	left: 140px;
 }
 
 #u566
@@ -261,14 +259,30 @@
 	z-index: 9;
 	width: 96px;
 	background-color: transparent;
+	margin-left: 130px;
 	margin-top: 50px;
+	position: relative;
+}
+
+#u553-4
+{
+	z-index: 50;
+	width: 55px;
+	min-height: 16px;
+	background-color: transparent;
+	line-height: 14px;
+	text-align: center;
+	font-size: 12px;
+	color: #FFFFFF;
+	margin-left: 150px;
+	margin-top: 352px;
 	position: relative;
 }
 
 #u555-bw
 {
 	z-index: 8;
-	min-height: 133px;
+	min-height: 481px;
 }
 
 #widgetu540
@@ -555,8 +569,8 @@
 	background-color: #F2F2F2;
 	border-radius: 6px;
 	padding: 6px;
-	color: #C4C4C4;
 	line-height: 28px;
+	color: #C4C4C4;
 	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-style: italic;
 	position: relative;
@@ -651,24 +665,8 @@
 	z-index: 2;
 	width: 101px;
 	margin-right: -10000px;
-	margin-top: 539px;
+	margin-top: 549px;
 	left: 20px;
-}
-
-#u553-4
-{
-	z-index: 50;
-	width: 55px;
-	min-height: 16px;
-	background-color: transparent;
-	color: #FFFFFF;
-	text-align: center;
-	font-size: 12px;
-	line-height: 14px;
-	position: relative;
-	margin-right: -10000px;
-	margin-top: 479px;
-	left: 162px;
 }
 
 #u528
@@ -676,7 +674,7 @@
 	z-index: 4;
 	width: 24px;
 	margin-right: -10000px;
-	margin-top: 537px;
+	margin-top: 547px;
 	left: 293px;
 }
 
@@ -685,7 +683,7 @@
 	z-index: 6;
 	width: 24px;
 	margin-right: -10000px;
-	margin-top: 537px;
+	margin-top: 547px;
 	left: 337px;
 }
 
@@ -693,7 +691,7 @@
 {
 	width: 24px;
 	min-height: 0px;
-	margin: 537px -10000px 0px 0px;
+	margin: 547px -10000px 0px 0px;
 }
 
 body
@@ -705,6 +703,6 @@ body
 #page .verticalspacer
 {
 	clear: both;
-	margin-bottom: -479px;
+	margin-bottom: -547px;
 }
 

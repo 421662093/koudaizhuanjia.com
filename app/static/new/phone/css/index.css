@@ -1,7 +1,7 @@
 .version.index /* version checker */
 {
-	color: #0000E5;
-	background-color: #A6AC29;
+	color: #00000C;
+	background-color: #571828;
 }
 
 @-ms-viewport
@@ -47,7 +47,7 @@
 
 #page_position_content
 {
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 	width: 0.01px;
 }
 
@@ -744,7 +744,7 @@
 {
 	width: 0.01px;
 	margin-left: 20px;
-	margin-top: 8px;
+	margin-top: 13px;
 }
 
 #u525
