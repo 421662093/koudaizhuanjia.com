@@ -33,7 +33,6 @@ def phoneindex():
 
 @main.route('/apply', methods=['GET', 'POST'])
 def apply():
-    
     if request.method == 'POST':
         form = ExpertApplyForm()
 
@@ -44,6 +43,7 @@ def apply():
                     item.id = collection.get_next_id('expertapply')
                     item.name = form.name.data
                     item.phone = form.phone.data
+                    item.date = common.getstamp()
                     item.save()
                     return '{"info":"认证信息提交成功","status":"y"}'
                 else:
