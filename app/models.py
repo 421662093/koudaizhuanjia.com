@@ -82,3 +82,44 @@ class collection(db.Document):
         else:
             collection(name=tablename, index=1).save()
             return 1
+
+
+class Expert(db.Document):  # 专家
+    __tablename__ = 'expert'
+    meta = {
+        'collection': __tablename__,
+    }
+    _id = db.IntField(primary_key=True)
+    phone = db.StringField(default='', max_length=64, required=True, db_field='p')  # 帐号(手机号)
+    name = db.StringField(default='', max_length=64, required=True, db_field='n')  # 姓名
+    site = db.StringField(default='', max_length=64, db_field='s')  # 常驻区域
+    email = db.StringField(default='', max_length=64, db_field='e')  # 邮箱
+    weixin = db.StringField(default='', max_length=64, db_field='wx')  # 微信
+    qq = db.StringField(default='', max_length=10, db_field='qq')  # QQ
+    domainid = db.IntField(default=1, db_field='di')  # 领域分类id
+    industryid = db.IntField(default=1, db_field='ii')  # 行业分类id
+    job = db.StringField(default='', max_length=64, db_field='j')  # 职位
+    date = db.IntField(default=0, db_field='d')  # 创建时间
+    intro = db.StringField(default='', db_field='i')  # 简介
+    label = db.ListField(default=[], db_field='l')  # 标签
+    progress = db.IntField(default=1, db_field='pr')# 审核进度 1 2 3 4
+    state = db.IntField(default=0, db_field='sta')# 状态 0未审核 1审核
+    
+    @staticmethod
+    def isphone(phone):
+        #查找手机是否存在 >0 存在   =0 不存在
+        if len(phone)>0:
+            return Expert.objects(phone=phone).count()
+        else:
+            return -1
+
+    def saveinfo(self):
+        self._id = collection.get_next_id(self.__tablename__)
+        istrue = Expert.isphone(phone=self.phone)
+        if istrue == 0:
+            self.date = common.getstamp()
+            self.save()
+
+            return self._id
+        else:
+            return -1

@@ -10,7 +10,7 @@ from flask.ext.sqlalchemy import get_debug_queries
 from . import main
 from .forms import ExpertApplyForm
 from ..core import common
-
+from .. import mc
 '''
 from .forms import EditProfileForm, EditProfileAdminForm, PostForm,\
     CommentForm
@@ -18,7 +18,7 @@ from .. import db
 from ..models import Permission, Role, User, Post, Comment
 from ..decorators import admin_required, permission_required
 '''
-from ..models import ExpertApply, collection
+from ..models import ExpertApply, collection,Expert
 
 # from ..models import Post
 
@@ -67,3 +67,48 @@ def apply():
 @main.route('/phoneapply', methods=['GET', 'POST'])
 def phoneapply():
     return render_template('phoneapply.html')
+
+@main.route('/becomeexpert', methods=['GET', 'POST'])
+def becomeexpert():
+    if request.method == 'POST':
+        _type = request.args.get('type',0,type=int)
+        name = request.form['name']
+        phone = request.form['phone']
+        code = common.strtoint(request.form['code'],0)
+        email = request.form['email']
+        site = request.form['site']
+
+        succeed = 0
+        if len(name)==0:
+            succeed+=1
+        if len(phone)==0:
+            succeed+=1
+        #if code==0:
+        #    succeed+=1
+        if len(email)==0:
+            succeed+=1
+        if len(site)==0:
+            succeed+=1
+        print str(succeed)
+        if succeed==0:
+            rv =common.strtoint(mc.get('code_'+phone),0)
+            if code==0:
+
+                exp = Expert()
+                exp.name = name
+                exp.phone = phone
+                exp.email = email
+                exp.site = site
+                issuc = exp.saveinfo()
+
+                if issuc==-1:
+                    return '{"ret":-3}' #手机号已存在
+                else:
+                    return '{"ret":1}'
+            else:
+                return '{"ret":-2}' #验证码错误
+        else:
+            return '{"ret":-1}' #提交数据格式错误
+
+    else:
+        return render_template('becomeexpert.html')

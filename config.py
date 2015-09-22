@@ -30,6 +30,8 @@ class DevelopmentConfig(Config):
         'host': 'mongodb://localhost:27017/'
     }
 
+    QCLOUD_MEMCACHED_IP = '10.66.108.120:9101'
+
 config = {
     'development': DevelopmentConfig,
     'default': DevelopmentConfig

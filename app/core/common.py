@@ -98,3 +98,11 @@ def htmlunescape(string):  # html反编码
 
 def getpagecount(count, pagesize):  # 获取页码数
     return (count + pagesize - 1) / pagesize
+
+def strtoint(val,default):
+    # 字符串转数字
+    try:
+        num = int(val)
+        return num
+    except Exception, e:
+        return default

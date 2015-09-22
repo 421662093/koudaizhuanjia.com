@@ -8,11 +8,13 @@ from flask.ext.mongoengine import MongoEngine
 from config import config
 from flask.ext.login import LoginManager
 from datetime import datetime
-
+import memcache
 from apscheduler.schedulers.background import BackgroundScheduler
+
+conf = config['default']
 scheduler = BackgroundScheduler()
 db = MongoEngine()
-
+mc = memcache.Client([conf.QCLOUD_MEMCACHED_IP],debug=0)
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
