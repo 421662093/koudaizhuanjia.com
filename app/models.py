@@ -94,17 +94,35 @@ class Expert(db.Document):  # 专家
     name = db.StringField(default='', max_length=64, required=True, db_field='n')  # 姓名
     site = db.StringField(default='', max_length=64, db_field='s')  # 常驻区域
     email = db.StringField(default='', max_length=64, db_field='e')  # 邮箱
-    weixin = db.StringField(default='', max_length=64, db_field='wx')  # 微信
-    qq = db.StringField(default='', max_length=10, db_field='qq')  # QQ
-    domainid = db.IntField(default=1, db_field='di')  # 领域分类id
-    industryid = db.IntField(default=1, db_field='ii')  # 行业分类id
+
+    school = db.StringField(default='', max_length=64, db_field='sc')  # 毕业学校
+    company = db.StringField(default='', max_length=64, db_field='c')  # 公司
     job = db.StringField(default='', max_length=64, db_field='j')  # 职位
-    date = db.IntField(default=0, db_field='d')  # 创建时间
-    intro = db.StringField(default='', db_field='i')  # 简介
+    domainid = db.IntField(default=1, db_field='di')  # 领域分类id
+    weixin = db.StringField(default='', max_length=64, db_field='wx')  # 微信
+    sina = db.StringField(default='', max_length=64, db_field='si')  # 新浪微博
+    zhihu = db.StringField(default='', max_length=64, db_field='zh')  # 知乎
+    other = db.StringField(default='', max_length=100, db_field='ot')  # 其他
     label = db.ListField(default=[], db_field='l')  # 标签
+    intro_one = db.StringField(default='', db_field='io')  # 介绍学业经历和从业经历
+    intro_two = db.StringField(default='', db_field='it')  # 介绍从事领域以及您的从业/创业心得
+
+    topic_title = db.StringField(default='', max_length=100, db_field='tt')  # 话题标题
+    topic_cause = db.StringField(default='',  db_field='tc')  # 选题原因
+    topic_content = db.StringField(default='', db_field='tco')  # 内容大纲
+    per_info = db.StringField(default='',  db_field='pi')  # 个人介绍
+    req = db.StringField(default='',  db_field='re')  # 来访要求
+    online_pri = db.IntField(default=0,  db_field='onp')  # 在线价格
+    offline_pri = db.IntField(default=0,  db_field='ofp')  # 线下价格
+    online_time = db.IntField(default=0,  db_field='ont')  # 在线时间
+    offline_time = db.IntField(default=0,  db_field='oft')  # 线下时间
+    #qq = db.StringField(default='', max_length=10, db_field='qq')  # QQ
+    #industryid = db.IntField(default=1, db_field='ii')  # 行业分类id
+    
+    date = db.IntField(default=0, db_field='d')  # 创建时间
     progress = db.IntField(default=1, db_field='pr')# 审核进度 1 2 3 4
     state = db.IntField(default=0, db_field='sta')# 状态 0未审核 1审核
-    
+
     @staticmethod
     def isphone(phone):
         #查找手机是否存在 >0 存在   =0 不存在
@@ -123,3 +141,45 @@ class Expert(db.Document):  # 专家
             return self._id
         else:
             return -1
+
+    def updateinfo(self,_type):
+
+        istrue = Expert.isphone(phone=self.phone)
+        if istrue == 1:
+
+            if _type==2:
+                update = {}
+                update['set__school'] = self.school
+                update['set__company'] = self.company
+                update['set__job'] = self.job
+                update['set__domainid'] = self.domainid
+                update['set__weixin'] = self.weixin
+                update['set__sina'] = self.sina
+                update['set__zhihu'] = self.zhihu
+                update['set__other'] = self.other
+                update['set__label'] = self.label
+                update['set__intro_one'] = self.intro_one
+                update['set__intro_two'] = self.intro_two
+                update['set__progress'] = 2
+
+                Expert.objects(phone=self.phone).update_one(**update)
+                return 1
+            elif _type==3:
+                update = {}
+                update['set__topic_title'] = self.topic_title
+                update['set__topic_cause'] = self.topic_cause
+                update['set__topic_content'] = self.topic_content
+                update['set__per_info'] = self.per_info
+                update['set__req'] = self.req
+                update['set__online_pri'] = self.online_pri
+                update['set__offline_pri'] = self.offline_pri
+                update['set__online_time'] = self.online_time
+                update['set__offline_time'] = self.offline_time
+                update['set__progress'] = 3
+
+                Expert.objects(phone=self.phone).update_one(**update)
+                return 1
+        else:
+            return -1
+
+            

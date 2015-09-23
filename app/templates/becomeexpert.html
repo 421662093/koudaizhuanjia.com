@@ -51,17 +51,17 @@
 											<span class="caption-subject font-blue-madison bold uppercase">请您耐心填写专家信息</span>
 										</div>
 										<ul class="nav nav-tabs">
-											<li class="active">
-												<a href="#tab_1_1" data-toggle="tab">基本资料-></a>
+											<li class="active" id='li_1'>
+												<a href="javascript:;">基本资料-></a>
 											</li>
-											<li>
-												<a href="#tab_1_2" data-toggle="tab">个性化介绍-></a>
+											<li id='li_2'>
+												<a href="javascript:;">个性化介绍-></a>
 											</li>
-											<li>
-												<a href="#tab_1_3" data-toggle="tab">话题设置-></a>
+											<li id='li_3'>
+												<a href="javascript:;">话题设置-></a>
 											</li>
-											<li>
-												<a href="#">完成申请</a>
+											<li id='li_4'>
+												<a href="javascript:;">完成申请</a>
 											</li>
 										</ul>
 									</div>
@@ -69,7 +69,6 @@
 										<div class="tab-content">
 											<!-- PERSONAL INFO TAB -->
 											<div class="tab-pane active" id="tab_1_1">
-												<form id='form_1' action="#">
 													<div class="form-group">
 														<label class="control-label">*姓名</label>
 														<input type="text" id="name" placeholder="姓名" class="form-control"/>
@@ -93,60 +92,72 @@
 													<div class="margiv-top-10">
 														<a href="javascript:subform(1);" id='btn_1' class="btn green-haze">下一步</a>
 													</div>
-												</form>
 											</div>
 											<!-- END PERSONAL INFO TAB -->
 											<!-- CHANGE AVATAR TAB -->
 											<div class="tab-pane" id="tab_1_2">
-												<form role="form" action="#">
 													<div class="form-group">
 														<label class="control-label">*毕业院校</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id="school" class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*公司</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id="company" class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*头衔/职位</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id="job" class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*从业领域</label>
-														<input type="text" class="form-control"/>
+														<select id="domainid" class="form-control">
+														<option value="1">新金融</option>
+                                                        <option value="2">教育</option>
+                                                        <option value="3">企业服务</option>
+                                                        <option value="4">电商</option>
+														<option value="5">游戏</option>
+                                                        <option value="6">互联网</option>
+														<option value="7">硬件</option>
+                                                        <option value="8">文化创意</option>
+														<option value="9">快消</option>
+                                                        <option value="10">医疗健康</option>
+														<option value="11">新农业</option>
+                                                        <option value="12">本地生活</option>
+														<option value="13">房地产</option>
+														<option value="14">汽车</option>
+														</select>
 													</div>
 													<div class="form-group">
 														<label class="control-label">微信公众号</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id="weixin" class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">微博</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id="sina" class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">知乎</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id="zhihu" class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">其他</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id="other" class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">个性化标签</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id="label" class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*请您简要介绍一下您的学业经历和从业经历</label>
-														<textarea class="form-control" rows="3" placeholder=""></textarea>
+														<textarea class="form-control" id="intro_one" rows="3" placeholder=""></textarea>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*请您介绍一下您现在所从事的领域以及您的从业/创业心得。</label>
-														<textarea class="form-control" rows="3" placeholder=""></textarea>
+														<textarea class="form-control" id="intro_two" rows="3" placeholder=""></textarea>
 													</div>
 													<div class="margiv-top-10">
-														<a href="javascript:;" class="btn green-haze">下一步</a>
+														<a href="javascript:subform(2);" id='btn_2' class="btn green-haze">下一步</a>
 													</div>
-												</form>
 											</div>
 											<!-- END CHANGE AVATAR TAB -->
 											<!-- CHANGE PASSWORD TAB -->
@@ -154,27 +165,27 @@
 												<form action="#">
 													<div class="form-group">
 														<label class="control-label">*话题名称</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id='topic_title' class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*选题原因（可以结合社会热点、市场刚需等）</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id='topic_cause' class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*该话题的内容大纲（概括的3-5个要点）</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id='topic_content' class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*您的个人优势（概括的3-5个要点）</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id='per_info' class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">来访要求</label>
-														<input type="text" class="form-control"/>
+														<input type="text" id='req' class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">线上语音价格</label>
-														（<input type="text" style="width:50px" />）元/次 约（<select>
+														（<input type="text" id='online_pri' style="width:50px" />）元/次 约（<select id='online_time'>
 														<option value="10">10分钟</option>
                                                         <option value="15">15分钟</option>
                                                         <option value="20">20分钟</option>
@@ -193,7 +204,7 @@
 													</div>
 													<div class="form-group">
 														<label class="control-label">线上见面价格</label>
-														（<input type="text" style="width:50px" />）元/次 约（<select>
+														（<input type="text" id='offline_pri' style="width:50px" />）元/次 约（<select id='offline_time'>
                                                         <option value="30">0.5小时</option>
                                                         <option value="60">1小时</option>
                                                         <option value="90">1.5小时</option>
@@ -205,7 +216,7 @@
 													</select>）分钟
 													</div>
 													<div class="margin-top-10">
-														<a href="javascript:;" class="btn green-haze">完成申请</a>
+														<a href="javascript:subform(3);" class="btn green-haze">完成申请</a>
 													</div>
 												</form>
 											</div>
@@ -260,6 +271,8 @@
 <script src="../static/js/bootstrap.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 lock = false
+tphone = ''
+tcode = ''
 function subform(type)
 {
 	if(!lock)
@@ -268,23 +281,129 @@ function subform(type)
 		ethis.html('提交中...')
 		lock = true
 		if(type==1)
-		{	
-
+		{
+			tphone = $('#phone').val()
+			tcode = $('#code').val()
 			$.ajax({
 			    type: "POST",
 			    url: '?type='+type,
 			    data:{
 			    		"name":$('#name').val(),
-			    		"phone":$('#phone').val(),
-			    		"code":$('#code').val(),
+			    		"phone":tphone,
+			    		"code":tcode,
 			    		"email":$('#email').val(),
 			    		"site":$('#site').val()
 			    	 },
 			    dataType: 'json',
 			    success: function(data) {
 			    	lock = false
-			    	alert(data.ret)
 			    	ethis.html('下一步')
+			    	if(data.ret>0)
+			    	{
+			    		$('.nav-tabs li').removeClass('active')
+			    		$('.tab-pane').removeClass('active')
+				    	
+				    	$('#li_'+(data.ret+1)).addClass('active')
+
+				    	$('#tab_1_'+(data.ret+1)).addClass('active')
+			    	}
+			    	else if(data.ret==-2)
+			    		alert('手机或验证码错误')
+			    	else if(data.ret==-1)
+			    		alert('必填项不能为空')
+			    },
+		    	error:function(ret) {
+		    		lock = false
+		    		alert('更新失败请重试')
+		    		ethis.html('下一步')
+		    	}
+			});
+		}
+		else if(type==2)
+		{
+			$.ajax({
+			    type: "POST",
+			    url: '?type='+type,
+			    data:{
+			    		"phone":tphone,
+			    		"code":tcode,
+			    		"school":$('#school').val(),
+			    		"school":$('#school').val(),
+			    		"company":$('#company').val(),
+			    		"job":$('#job').val(),
+			    		"domainid":$('#domainid').val(),
+			    		"weixin":$('#weixin').val(),
+			    		"sina":$('#sina').val(),
+			    		"zhihu":$('#zhihu').val(),
+			    		"other":$('#other').val(),
+			    		"label":$('#label').val(),
+			    		"intro_one":$('#intro_one').val(),
+			    		"intro_two":$('#intro_two').val()
+			    	 },
+			    dataType: 'json',
+			    success: function(data) {
+			    	lock = false
+			    	ethis.html('下一步')
+			    	if(data.ret>0)
+			    	{
+			    		$('.nav-tabs li').removeClass('active')
+			    		$('.tab-pane').removeClass('active')
+				    	$('#li_'+(data.ret+1)).addClass('active')
+				    	$('#tab_1_'+(data.ret+1)).addClass('active')
+			    	}
+			    	else if(data.ret==-2)
+			    		alert('手机或验证码错误')
+			    	else if(data.ret==-3)
+			    		alert('手机号不存在，请重新提交')
+			    	else if(data.ret==-1)
+			    		alert('必填项不能为空')
+			    	else if(data.ret==-5)
+			    		alert('手机号不存在')
+			    },
+		    	error:function(ret) {
+		    		lock = false
+		    		alert('更新失败请重试')
+		    		ethis.html('下一步')
+		    	}
+			});
+		}
+		else if(type==3)
+		{
+			$.ajax({
+			    type: "POST",
+			    url: '?type='+type,
+			    data:{
+			    		"phone":tphone,
+			    		"code":tcode,
+			    		"topictitle":$('#topic_title').val(),
+			    		"topiccause":$('#topic_cause').val(),
+			    		"topiccontent":$('#topic_content').val(),
+			    		"perinfo":$('#per_info').val(),
+			    		"req":$('#req').val(),
+			    		"onlinepri":$('#online_pri').val(),
+			    		"offlinepri":$('#offline_pri').val(),
+			    		"onlinetime":$('#online_time').val(),
+			    		"offlinetime":$('#offline_time').val()
+			    	 },
+			    dataType: 'json',
+			    success: function(data) {
+			    	lock = false
+			    	ethis.html('下一步')
+			    	if(data.ret>0)
+			    	{
+			    		$('.nav-tabs li').removeClass('active')
+			    		$('.tab-pane').removeClass('active')
+				    	$('#li_'+(data.ret+1)).addClass('active')
+				    	$('#tab_1_'+(data.ret+1)).addClass('active')
+			    	}
+			    	else if(data.ret==-2)
+			    		alert('手机或验证码错误')
+			    	else if(data.ret==-3)
+			    		alert('手机号不存在，请重新提交')
+			    	else if(data.ret==-1)
+			    		alert('必填项不能为空')
+			    	else if(data.ret==-5)
+			    		alert('手机号不存在')
 			    },
 		    	error:function(ret) {
 		    		lock = false

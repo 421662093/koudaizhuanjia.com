@@ -26,7 +26,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     # mongodb://user1:password1@localhost/test
     MONGODB_SETTINGS = {
-        'db': 'koudaizhuanjia',
+        'db': 'fullteck',#koudaizhuanjia
         'host': 'mongodb://localhost:27017/'
     }
 
