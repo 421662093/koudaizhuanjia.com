@@ -11,6 +11,7 @@ from . import main
 from .forms import ExpertApplyForm
 from ..core import common
 from .. import mc
+from ..sdk.yuntongxun import SendTemplateSMS as SMS
 '''
 from .forms import EditProfileForm, EditProfileAdminForm, PostForm,\
     CommentForm
@@ -67,6 +68,44 @@ def apply():
 @main.route('/phoneapply', methods=['GET', 'POST'])
 def phoneapply():
     return render_template('phoneapply.html')
+
+
+@api.route('/getcode', methods = ['POST'])
+def get_code():
+    '''
+    验证手机号是否存在，并发送手机验证码
+
+    URL:/getcode
+    格式
+        JSON
+    POST 参数:
+        phone -- 帐号 (必填)
+    返回值
+        {'ret':1} 发送成功
+        -1 帐号为空
+        -2 帐号已存在
+        -3 验证码发送失败,联系运营商
+        -4 手机号格式错误
+        -5 系统异常
+    '''
+    try:
+        phone = request.form['phone']
+        if len(phone)==11:
+            if User.isusername(phone=phone)>0:
+                return jsonify(ret=-2) #帐号已存在
+            code = common.getrandom(100000,999999)
+            mc.set('code_'+phone,code)
+            smscode = SMS.sendTemplateSMS(phone,[code,10],34443)
+            #print str(type(smscode))+'___'+smscode
+            if smscode=='000000':
+                return jsonify(ret=1)#验证码已发送
+            else:
+                return jsonify(ret=-3)#验证码发送失败,联系运营商
+        return jsonify(ret=-4)#手机号格式错误
+    except Exception,e:
+        logging.debug(e)
+        return jsonify(ret=-5)#系统异常
+
 
 @main.route('/becomeexpert', methods=['GET', 'POST'])
 def becomeexpert():
@@ -127,12 +166,15 @@ def becomeexpert():
                         exp.zhihu = request.form['zhihu']
                         exp.other = request.form['other']
                         exp.label = request.form['label']
+
+                        if len(exp.label.strip())>0:
+                            exp.label = [i.strip() for i in exp.label.split(' ')]
+                        exp.label = common.delrepeat(exp.label) #移除标签中重复
+
                         exp.intro_one = request.form['intro_one']
                         exp.intro_two = request.form['intro_two']
                         exp.phone = phone
 
-                        if len(exp.school)==0:
-                            succeed+=1
                         if len(exp.company)==0:
                             succeed+=1
                         if len(exp.job)==0:
@@ -147,7 +189,6 @@ def becomeexpert():
                                 issuc = exp.updateinfo(_type=2)
 
                                 if issuc==1:
-                                    
                                     return '{"ret":2}' #更新成功
                                 else:
                                     return '{"ret":-3}'

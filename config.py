@@ -31,7 +31,11 @@ class DevelopmentConfig(Config):
     }
 
     QCLOUD_MEMCACHED_IP = '10.66.108.120:9101'
-
+    #容联云通讯
+    YUNTONGXUN_SID = 'aaf98f894ecd7d6a014ed28bb38c0783' #主账号 ACCOUNT SID
+    YUNTONGXUN_TOKEN = '02a449a36fa347aba7ed5854b7f80c21' #主账号 AUTH TOKEN
+    YUNTONGXUN_APPID = 'aaf98f894ecd7d6a014ed2a653c10813' #APPID
+    
 config = {
     'development': DevelopmentConfig,
     'default': DevelopmentConfig

@@ -52,13 +52,13 @@
 										</div>
 										<ul class="nav nav-tabs">
 											<li class="active" id='li_1'>
-												<a href="javascript:;">基本资料-></a>
+												<a href="#tab_1_1" data-toggle="tab">基本资料-></a>
 											</li>
 											<li id='li_2'>
-												<a href="javascript:;">个性化介绍-></a>
+												<a href="#tab_1_2" data-toggle="tab">个性化介绍-></a>
 											</li>
 											<li id='li_3'>
-												<a href="javascript:;">话题设置-></a>
+												<a href="#tab_1_3" data-toggle="tab">话题设置-></a>
 											</li>
 											<li id='li_4'>
 												<a href="javascript:;">完成申请</a>
@@ -87,7 +87,7 @@
 													</div>
 													<div class="form-group">
 														<label class="control-label">*常驻区域</label>
-														<input type="text" id="site" placeholder="常驻区域" class="form-control"/>
+														<input type="text" id="site" placeholder="北京／中关村" class="form-control"/>
 													</div>
 													<div class="margiv-top-10">
 														<a href="javascript:subform(1);" id='btn_1' class="btn green-haze">下一步</a>
@@ -97,7 +97,7 @@
 											<!-- CHANGE AVATAR TAB -->
 											<div class="tab-pane" id="tab_1_2">
 													<div class="form-group">
-														<label class="control-label">*毕业院校</label>
+														<label class="control-label">毕业院校</label>
 														<input type="text" id="school" class="form-control"/>
 													</div>
 													<div class="form-group">
@@ -111,20 +111,21 @@
 													<div class="form-group">
 														<label class="control-label">*从业领域</label>
 														<select id="domainid" class="form-control">
-														<option value="1">新金融</option>
-                                                        <option value="2">教育</option>
-                                                        <option value="3">企业服务</option>
-                                                        <option value="4">电商</option>
-														<option value="5">游戏</option>
-                                                        <option value="6">互联网</option>
-														<option value="7">硬件</option>
-                                                        <option value="8">文化创意</option>
-														<option value="9">快消</option>
-                                                        <option value="10">医疗健康</option>
-														<option value="11">新农业</option>
-                                                        <option value="12">本地生活</option>
-														<option value="13">房地产</option>
-														<option value="14">汽车</option>
+                                                        <option value="0">所在行业</option>
+														<option value="1">媒体</option>
+                                                        <option value="2">自媒体</option>
+                                                        <option value="3">投资人</option>
+                                                        <option value="4">创业者</option>
+														<option value="5">技术</option>
+                                                        <option value="6">设计</option>
+														<option value="7">产品经理</option>
+                                                        <option value="8">策划</option>
+														<option value="9">营销</option>
+                                                        <option value="10">市场</option>
+														<option value="11">公关</option>
+                                                        <option value="12">运营</option>
+														<option value="13">人力资源</option>
+														<option value="14">管理</option>
 														</select>
 													</div>
 													<div class="form-group">
@@ -140,22 +141,23 @@
 														<input type="text" id="zhihu" class="form-control"/>
 													</div>
 													<div class="form-group">
-														<label class="control-label">其他</label>
+														<label class="control-label">其他社交平台或专栏链接</label>
 														<input type="text" id="other" class="form-control"/>
 													</div>
 													<div class="form-group">
-														<label class="control-label">个性化标签</label>
+														<label class="control-label">个性化标签 多个标签 空格分割</label>
 														<input type="text" id="label" class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*请您简要介绍一下您的学业经历和从业经历</label>
-														<textarea class="form-control" id="intro_one" rows="3" placeholder=""></textarea>
+														<textarea class="form-control" placeholder="中南民族大学法学专业毕业后，进入新浪乐居（目前已经上市）工作，先后在人力资源部，市场部以及策划产品部任职。2015年年初，伴随创业大潮，来到绿狗担任市场总监一职。并与今年8月份出来自己创业，成立清和源法务总监平台。" id="intro_one" rows="3" ></textarea>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*请您介绍一下您现在所从事的领域以及您的从业/创业心得。</label>
-														<textarea class="form-control" id="intro_two" rows="3" placeholder=""></textarea>
+														<textarea class="form-control" id="intro_two" rows="3" placeholder="鉴于一直在互联网圈里任职，现在又从事法律电商领域,深知创业者对于法律的需求及痛点，对于初创企业来说，法律是刚需，但是找律师难，衡量律师难，比价难，这“三难”是横在创业者面前的三座大山，对于创始人来说，亦没有太多精力去涉猎更多的法律知识。这也是我创业的目的，为创业者和律师搭建平台，让法律更加容易的“走”进创业者心里。让天下的企业能够安心、安全创业。"></textarea>
 													</div>
 													<div class="margiv-top-10">
+                                                        <a href="javascript:;" class="btn default">预览</a>
 														<a href="javascript:subform(2);" id='btn_2' class="btn green-haze">下一步</a>
 													</div>
 											</div>
@@ -165,23 +167,28 @@
 												<form action="#">
 													<div class="form-group">
 														<label class="control-label">*话题名称</label>
-														<input type="text" id='topic_title' class="form-control"/>
+														<input type="text" placeholder="初创型团队如何建立产品的用户增长模型" id='topic_title' class="form-control"/>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*选题原因（可以结合社会热点、市场刚需等）</label>
-														<input type="text" id='topic_cause' class="form-control"/>
+                                                        <textarea placeholder="对于大多数初创型团队，没有过多的营销预算，而用户的增长是产品在初期最急需解决的问题。Growth  Hacking可以帮助初创型团队在资源有限的情况下，最大程度的获取用户增长。" id='topic_cause' class="form-control"></textarea>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*该话题的内容大纲（概括的3-5个要点）</label>
-														<input type="text" id='topic_content' class="form-control"/>
+                                                        <textarea style="height:95px" placeholder="1. 产品key-value制作。任何产品在不同阶段，都存在且仅存在一个产品的核心价值点，帮助创业者寻找到这个点；
+2. 围绕产品key-value进行数据打点，设立各项核心数据的benchmark；
+3. 建立产品在社会化媒体上获取流量的闭环，并设立A/B测试方法；
+4. 基于产品的各项数据，如何建立用户增长模型的方法。" id='topic_content' class="form-control"></textarea>
 													</div>
 													<div class="form-group">
 														<label class="control-label">*您的个人优势（概括的3-5个要点）</label>
-														<input type="text" id='per_info' class="form-control"/>
+														<textarea style="height:75px" placeholder="1. Growth Hacking实操经验，帮助某社交产品在6个月内0费用获取40万用户；
+2. DMP平台经验，对用户行为的深度研究；
+3. 社会化媒体病毒传播实操经验。" id='per_info' class="form-control"></textarea>
 													</div>
 													<div class="form-group">
 														<label class="control-label">来访要求</label>
-														<input type="text" id='req' class="form-control"/>
+                                                        <textarea placeholder="约见者需要提前备好提纲，最好提前告知提问内容，我好做充分的准备。" id='req' class="form-control"></textarea>
 													</div>
 													<div class="form-group">
 														<label class="control-label">线上语音价格</label>
@@ -200,7 +207,7 @@
                                                         <option value="150">2.5小时</option>
 														<option value="180">3小时</option>
 														<option value="240">4小时</option>
-													</select>）分钟
+													</select>）
 													</div>
 													<div class="form-group">
 														<label class="control-label">线上见面价格</label>
@@ -213,9 +220,10 @@
 														<option value="180">3小时</option>
                                                         <option value="210">3.5小时</option>
                                                         <option value="240">4小时</option>
-													</select>）分钟
+													</select>）
 													</div>
 													<div class="margin-top-10">
+                                                        <a href="javascript:;" class="btn default">预览</a>
 														<a href="javascript:subform(3);" class="btn green-haze">完成申请</a>
 													</div>
 												</form>
@@ -227,7 +235,7 @@
 													<table class="table table-light table-hover">
 													<tr>
 														<td>
-															 Wellcome！
+															 Welcome！
 														</td>
 													</tr>
 													<tr>

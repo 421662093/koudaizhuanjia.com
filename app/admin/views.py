@@ -6,7 +6,7 @@ from flask.ext.login import login_required, current_user, logout_user
 from . import admin
 from .decorators import permission_required
 from .authentication import auth
-from ..models import Permission, ExpertApply
+from ..models import Permission, ExpertApply,Expert
 from ..core import common
 
 
@@ -35,3 +35,20 @@ def expertapply_list(index=1):
 def logout():
     logout_user()
     return jsonify(msg='用户已登出')
+
+@admin.route('/expertlist')
+@admin.route('/expertlist/<int:index>', methods=['GET', 'POST'])
+@auth.login_required
+def expert_list(index=1):
+
+    if request.method == 'POST':
+        pass
+    else:
+        pagesize = 8
+        count = Expert.getcount()
+        tpcount = common.getpagecount(count,pagesize)
+        if index>tpcount:
+            index = tpcount
+        e_list = Expert.getlist(index=index,pagesize=pagesize)
+        func = {'stamp2time': common.stamp2time}
+        return render_template('admin/expert_list.html', list=e_list, common=func,pagecount=tpcount,index=index)

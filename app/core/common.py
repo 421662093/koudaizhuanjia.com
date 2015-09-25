@@ -106,3 +106,12 @@ def strtoint(val,default):
         return num
     except Exception, e:
         return default
+
+
+def delrepeat(templist):
+    #移除list重复
+    new_ids = []
+    for item in templist:
+        if item not in new_ids and len(item)>0:
+            new_ids.append(item)
+    return new_ids

@@ -181,5 +181,13 @@ class Expert(db.Document):  # 专家
                 return 1
         else:
             return -1
+                        
+    @staticmethod
+    def getlist(eid=0,index=1, pagesize=10):
 
-            
+        pageindex =(index-1)*pagesize
+        return Expert.objects().order_by("-_id").skip(pageindex).limit(pagesize)
+
+    @staticmethod
+    def getcount(eid=0):
+        return Expert.objects.count()
