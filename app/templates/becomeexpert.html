@@ -51,14 +51,15 @@
 											<span class="caption-subject font-blue-madison bold uppercase">请您耐心填写专家信息</span>
 										</div>
 										<ul class="nav nav-tabs">
+											<!--data-toggle="tab"-->
 											<li class="active" id='li_1'>
-												<a href="#tab_1_1" data-toggle="tab">基本资料-></a>
+												<a href="#tab_1_1" >基本资料-></a>
 											</li>
 											<li id='li_2'>
-												<a href="#tab_1_2" data-toggle="tab">个性化介绍-></a>
+												<a href="#tab_1_2" >个性化介绍-></a>
 											</li>
 											<li id='li_3'>
-												<a href="#tab_1_3" data-toggle="tab">话题设置-></a>
+												<a href="#tab_1_3" >话题设置-></a>
 											</li>
 											<li id='li_4'>
 												<a href="javascript:;">完成申请</a>
@@ -111,7 +112,7 @@
 													<div class="form-group">
 														<label class="control-label">*从业领域</label>
 														<select id="domainid" class="form-control">
-                                                        <option value="0">所在行业</option>
+                                                        <option value="0">所有行业</option>
 														<option value="1">媒体</option>
                                                         <option value="2">自媒体</option>
                                                         <option value="3">投资人</option>
@@ -156,14 +157,18 @@
 														<label class="control-label">*请您介绍一下您现在所从事的领域以及您的从业/创业心得。</label>
 														<textarea class="form-control" id="intro_two" rows="3" placeholder="鉴于一直在互联网圈里任职，现在又从事法律电商领域,深知创业者对于法律的需求及痛点，对于初创企业来说，法律是刚需，但是找律师难，衡量律师难，比价难，这“三难”是横在创业者面前的三座大山，对于创始人来说，亦没有太多精力去涉猎更多的法律知识。这也是我创业的目的，为创业者和律师搭建平台，让法律更加容易的“走”进创业者心里。让天下的企业能够安心、安全创业。"></textarea>
 													</div>
+													<div style="position:relative;">
 													<div class="margiv-top-10">
-                                                        <a href="javascript:;" class="btn default">预览</a>
+                                                        <a href="javascript:yulan(2);" class="btn default">预览</a>
 														<a href="javascript:subform(2);" id='btn_2' class="btn green-haze">下一步</a>
+													</div>
+													<div id="yulan_2" show="0" style="padding:6px 12px;font-size:14px;width:600px; height:110px; border:1px solid #e5e5e5; background-color:#F5F5F5; display:none; position:absolute; top:-120px;overflow-y:auto;">
+													</div>
 													</div>
 											</div>
 											<!-- END CHANGE AVATAR TAB -->
 											<!-- CHANGE PASSWORD TAB -->
-											<div class="tab-pane" id="tab_1_3">
+											<div class="tab-pane" id="tab_1_3" style="position:relative;">
 												<form action="#">
 													<div class="form-group">
 														<label class="control-label">*话题名称</label>
@@ -222,9 +227,14 @@
                                                         <option value="240">4小时</option>
 													</select>）
 													</div>
-													<div class="margin-top-10">
-                                                        <a href="javascript:;" class="btn default">预览</a>
+
+													<div style="position:relative;">
+													<div class="margiv-top-10">
+                                                        <a href="javascript:yulan(3);" class="btn default">预览</a>
 														<a href="javascript:subform(3);" class="btn green-haze">完成申请</a>
+													</div>
+													<div id="yulan_3" show="0" style="padding:6px 12px;font-size:14px;width:600px; height:170px; border:1px solid #e5e5e5; background-color:#F5F5F5; display:none; position:absolute; top:-180px;overflow-y:auto;">
+													</div>
 													</div>
 												</form>
 											</div>
@@ -310,9 +320,7 @@ function subform(type)
 			    	{
 			    		$('.nav-tabs li').removeClass('active')
 			    		$('.tab-pane').removeClass('active')
-				    	
 				    	$('#li_'+(data.ret+1)).addClass('active')
-
 				    	$('#tab_1_'+(data.ret+1)).addClass('active')
 			    	}
 			    	else if(data.ret==-2)
@@ -423,6 +431,44 @@ function subform(type)
 	}
 }
 
+function yulan(type)
+{
+	ethis = $('#yulan_'+type)
+
+	if(type=='2')
+	{
+
+		arr = ['<b>效果预览：</b><br/><br/>',
+		'我是（'+$('#name').val()+'）， 我现在（'+$('#company').val()+'） 担任（'+$('#job').val()+'），从事（'+$('#domainid').find("option:selected").text()+'）行业。',
+		$('#intro_one').val(),
+		'<br/>',
+		$('#intro_two').val(),
+		'希望我的经验对你有所帮助。']
+		ethis.html(arr.join(''))
+	}
+	else
+	{
+		arr = ['<b>效果预览：</b><br/><br/>',
+			'（'+$('#topic_cause').val()+'）， 而我个人在这方面具有以下优势：<br/>',
+			'（'+$('#per_info').val()+'）<br/>',
+			'针对（'+$('#topic_title').val()+'），我能给你做如下分享：<br/>',
+			'（'+$('#topic_content').val()+'）<br/>',
+			'另外：（'+$('#req').val()+'）'
+		]
+		ethis.html(arr.join(''))
+	}
+	if(ethis.attr('show')=='0')
+	{
+		ethis.show()
+		ethis.attr('show','1')
+	}
+	else
+	{
+		ethis.hide()
+		ethis.attr('show','0')
+	}
+
+}
 </script>
 </body>
 <!-- END BODY -->

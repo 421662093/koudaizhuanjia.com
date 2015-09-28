@@ -70,7 +70,7 @@ def phoneapply():
     return render_template('phoneapply.html')
 
 
-@api.route('/getcode', methods = ['POST'])
+@main.route('/getcode', methods = ['POST'])
 def get_code():
     '''
     验证手机号是否存在，并发送手机验证码
